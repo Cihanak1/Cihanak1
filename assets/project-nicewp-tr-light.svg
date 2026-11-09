@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 220" width="100%" height="100%">
+  <defs>
+    <linearGradient id="niceLightBgTr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
+    </linearGradient>
+    <linearGradient id="niceLightBorderTr" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#CBD5E1" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.6" />
+    </linearGradient>
+    <pattern id="gridDotLight2Tr" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="0.8" fill="#E2E8F0" />
+    </pattern>
+  </defs>
+
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    @keyframes pulseTagLight2Tr {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 0.4; }
+    }
+    .pulse-tag2 { animation: pulseTagLight2Tr 3s infinite ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .pulse-tag2 { animation: none !important; }
+    }
+  </style>
+
+  <!-- Background Container -->
+  <rect x="2" y="2" width="916" height="216" rx="12" fill="url(#niceLightBgTr)" stroke="url(#niceLightBorderTr)" stroke-width="1.5" />
+  <rect x="4" y="4" width="912" height="212" rx="10" fill="url(#gridDotLight2Tr)" />
+
+  <!-- Top Accent Bar -->
+  <path d="M 12 2 L 180 2 L 195 16 L 350 16 L 365 2 L 908 2" fill="none" stroke="#7C3AED" stroke-width="1.5" opacity="0.4" />
+
+  <!-- Left Content Column -->
+  <g transform="translate(32, 28)">
+    <!-- Category & Release Badge -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="180" height="20" rx="4" fill="#F1F5F9" stroke="#7C3AED" stroke-width="0.8" />
+      <text x="8" y="14" fill="#7C3AED" font-size="9.5" class="mono" font-weight="700">MASAÜSTÜ SİSTEMLERİ // 02</text>
+      
+      <!-- Release Pill -->
+      <g transform="translate(190, 0)">
+        <rect x="0" y="0" width="110" height="20" rx="4" fill="#F1F5F9" stroke="#0284C7" stroke-width="0.8" />
+        <circle class="pulse-tag2" cx="10" cy="10" r="3" fill="#0284C7" />
+        <text x="18" y="14" fill="#0284C7" font-size="9.5" class="mono" font-weight="700">v0.0.23 ÖN İZLEME</text>
+      </g>
+    </g>
+
+    <!-- Project Title -->
+    <text x="0" y="54" fill="#0F172A" font-size="28" class="sans" font-weight="800" letter-spacing="0.5">
+      NiceWP
+      <tspan fill="#64748B" font-size="13.5" font-weight="500" class="mono"> — Windows İçin Dinamik Duvar Kâğıdı Motoru</tspan>
+    </text>
+
+    <!-- Description -->
+    <text x="0" y="80" fill="#334155" font-size="12.5" class="sans" font-weight="400">
+      WinUI 3 ve .NET 10 üzerinde geliştirilen kaynak tasarruflu dinamik duvar kâğıdı motoru.
+    </text>
+    <text x="0" y="98" fill="#334155" font-size="12.5" class="sans" font-weight="400">
+      Çift süreçli yalıtımlı mimari, Win32 WorkerW masaüstü kancası ve Named Pipe IPC.
+    </text>
+
+    <!-- Tech Badges -->
+    <g transform="translate(0, 122)">
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="70" height="22" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1" />
+        <text x="35" y="15" fill="#7C3AED" font-size="10.5" class="mono" font-weight="600" text-anchor="middle">C# 13</text>
+      </g>
+      <g transform="translate(78, 0)">
+        <rect x="0" y="0" width="76" height="22" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1" />
+        <text x="38" y="15" fill="#7C3AED" font-size="10.5" class="mono" font-weight="600" text-anchor="middle">.NET 10</text>
+      </g>
+      <g transform="translate(162, 0)">
+        <rect x="0" y="0" width="74" height="22" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1" />
+        <text x="37" y="15" fill="#0284C7" font-size="10.5" class="mono" font-weight="600" text-anchor="middle">WinUI 3</text>
+      </g>
+      <g transform="translate(244, 0)">
+        <rect x="0" y="0" width="100" height="22" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1" />
+        <text x="50" y="15" fill="#0D9488" font-size="10.5" class="mono" font-weight="600" text-anchor="middle">Win32 Kanca</text>
+      </g>
+      <g transform="translate(352, 0)">
+        <rect x="0" y="0" width="88" height="22" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1" />
+        <text x="44" y="15" fill="#D97706" font-size="10.5" class="mono" font-weight="600" text-anchor="middle">Boru IPC</text>
+      </g>
+      <g transform="translate(448, 0)">
+        <rect x="0" y="0" width="108" height="22" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1" />
+        <text x="54" y="15" fill="#0284C7" font-size="10.5" class="mono" font-weight="600" text-anchor="middle">Sayfa Kıvrılma</text>
+      </g>
+    </g>
+
+    <!-- Action Link -->
+    <g transform="translate(0, 160)">
+      <text x="0" y="0" fill="#7C3AED" font-size="11.5" class="mono" font-weight="700">
+        PROJEYİ İNCELE <tspan fill="#0284C7">→</tspan> <tspan fill="#64748B">github.com/Cihanak1/NiceWP</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Right Architecture Flow Box: Two-Process IPC Diagram -->
+  <g transform="translate(630, 24)">
+    <rect x="0" y="0" width="258" height="172" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" />
+    <rect x="0" y="0" width="258" height="24" rx="8" fill="#F1F5F9" />
+    <text x="12" y="16" fill="#475569" font-size="10" class="mono" font-weight="700">ÇİFT SÜREÇLİ MİMARİ</text>
+
+    <!-- Process 1: NiceWP.App UI -->
+    <g transform="translate(14, 38)">
+      <rect x="0" y="0" width="230" height="28" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="0.8" />
+      <text x="10" y="18" fill="#0F172A" font-size="10" class="mono">NiceWP.App (WinUI 3 Arayüzü)</text>
+    </g>
+
+    <!-- Bi-directional IPC Pipe -->
+    <g transform="translate(14, 73)">
+      <line x1="60" y1="0" x2="60" y2="18" stroke="#0284C7" stroke-width="1.5" stroke-dasharray="2,2" />
+      <line x1="170" y1="0" x2="170" y2="18" stroke="#0D9488" stroke-width="1.5" stroke-dasharray="2,2" />
+      <rect x="80" y="0" width="70" height="18" rx="3" fill="#E2E8F0" />
+      <text x="115" y="12" fill="#D97706" font-size="8.5" class="mono" font-weight="700" text-anchor="middle">IPC BORUSU</text>
+    </g>
+
+    <!-- Process 2: NiceWP.Runtime.Host Engine -->
+    <g transform="translate(14, 98)">
+      <rect x="0" y="0" width="230" height="28" rx="4" fill="#FFFFFF" stroke="#0284C7" stroke-width="0.8" />
+      <text x="10" y="18" fill="#0F172A" font-size="10" class="mono">NiceWP.Host (WorkerW Kancası)</text>
+    </g>
+
+    <!-- System State Indicator -->
+    <g transform="translate(14, 134)">
+      <rect x="0" y="0" width="230" height="24" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8" />
+      <circle cx="12" cy="12" r="3" fill="#0D9488" />
+      <text x="22" y="15" fill="#475569" font-size="8.5" class="mono">Oyun &amp; Düşük Pilde Otomatik Dondurma</text>
+    </g>
+  </g>
+</svg>

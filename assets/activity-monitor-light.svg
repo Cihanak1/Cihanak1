@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" width="100%" height="100%">
   <defs>
-    <linearGradient id="actBg_light" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="actBg_light_tr" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFFFFF" />
       <stop offset="100%" stop-color="#F8FAFC" />
     </linearGradient>
-    <linearGradient id="actBorder_light" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="actBorder_light_tr" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0284C7" stop-opacity="0.7" />
       <stop offset="50%" stop-color="#CBD5E1" />
       <stop offset="100%" stop-color="#0D9488" stop-opacity="0.6" />
@@ -25,7 +25,7 @@
   </style>
 
   <!-- Frame -->
-  <rect x="2" y="2" width="916" height="276" rx="12" fill="url(#actBg_light)" stroke="url(#actBorder_light)" stroke-width="1.5" />
+  <rect x="2" y="2" width="916" height="276" rx="12" fill="url(#actBg_light_tr)" stroke="url(#actBorder_light_tr)" stroke-width="1.5" />
 
   <!-- Top Title Bar -->
   <rect x="2" y="2" width="916" height="34" rx="12" fill="#F1F5F9" />
@@ -34,53 +34,53 @@
 
   <!-- Live Pulse Dot & Header Text -->
   <circle class="pulse-led" cx="24" cy="19" r="4" fill="#0D9488" />
-  <text x="36" y="23" fill="#0D9488" font-size="11" class="mono" font-weight="700">ENGINEERING ACTIVITY MONITOR</text>
-  <text x="256" y="23" fill="#94A3B8" font-size="10" class="mono">// 52-WEEK COMMIT CADENCE &amp; TELEMETRY</text>
+  <text x="36" y="23" fill="#0D9488" font-size="11" class="mono" font-weight="700">YAZILIM GELİŞTİRME AKTİVİTEM</text>
+  <text x="220" y="23" fill="#94A3B8" font-size="10" class="mono">// 52 HAFTALIK COMMİT VE GELİŞTİRME RİTMİ</text>
 
   <!-- Sync Timestamp -->
-  <text x="896" y="23" fill="#475569" font-size="10" class="mono" text-anchor="end">SYNC: 2026-11-09 15:42 UTC</text>
+  <text x="896" y="23" fill="#475569" font-size="10" class="mono" text-anchor="end">GÜNCELLEME: 2026-11-09 15:58 UTC</text>
 
   <!-- Metric Badges Row (4 Counters) -->
   <g transform="translate(36, 48)">
     <!-- Metric 1: Total Contributions -->
     <g transform="translate(0, 0)">
       <rect x="0" y="0" width="198" height="66" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
-      <text x="14" y="20" fill="#94A3B8" font-size="9.5" class="mono" font-weight="600">CALENDAR CONTRIBUTIONS</text>
+      <text x="14" y="20" fill="#94A3B8" font-size="9.5" class="mono" font-weight="600">TOPLAM KATKI</text>
       <text x="14" y="48" fill="#0F172A" font-size="24" class="sans" font-weight="800">384</text>
-      <text x="184" y="48" fill="#0284C7" font-size="11" class="mono" font-weight="700" text-anchor="end">YEAR-TOTAL</text>
+      <text x="184" y="48" fill="#0284C7" font-size="10.5" class="mono" font-weight="700" text-anchor="end">YILLIK TOPLAM</text>
     </g>
 
     <!-- Metric 2: Commits -->
     <g transform="translate(216, 0)">
       <rect x="0" y="0" width="198" height="66" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
-      <text x="14" y="20" fill="#94A3B8" font-size="9.5" class="mono" font-weight="600">VERIFIED COMMITS</text>
+      <text x="14" y="20" fill="#94A3B8" font-size="9.5" class="mono" font-weight="600">COMMİT SAYISI</text>
       <text x="14" y="48" fill="#0F172A" font-size="24" class="sans" font-weight="800">368</text>
-      <text x="184" y="48" fill="#0D9488" font-size="11" class="mono" font-weight="700" text-anchor="end">PRIMARY</text>
+      <text x="184" y="48" fill="#0D9488" font-size="10.5" class="mono" font-weight="700" text-anchor="end">BİRİNCİL</text>
     </g>
 
     <!-- Metric 3: Active Weeks -->
     <g transform="translate(432, 0)">
       <rect x="0" y="0" width="198" height="66" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
-      <text x="14" y="20" fill="#94A3B8" font-size="9.5" class="mono" font-weight="600">ACTIVE CADENCE</text>
+      <text x="14" y="20" fill="#94A3B8" font-size="9.5" class="mono" font-weight="600">AKTİF HAFTA</text>
       <text x="14" y="48" fill="#0F172A" font-size="24" class="sans" font-weight="800">14<tspan font-size="14" fill="#94A3B8">/52</tspan></text>
-      <text x="184" y="48" fill="#7C3AED" font-size="11" class="mono" font-weight="700" text-anchor="end">WEEKS</text>
+      <text x="184" y="48" fill="#7C3AED" font-size="10.5" class="mono" font-weight="700" text-anchor="end">HAFTA</text>
     </g>
 
     <!-- Metric 4: Public Repos -->
     <g transform="translate(648, 0)">
       <rect x="0" y="0" width="200" height="66" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
-      <text x="14" y="20" fill="#94A3B8" font-size="9.5" class="mono" font-weight="600">PUBLIC CODEBASES</text>
+      <text x="14" y="20" fill="#94A3B8" font-size="9.5" class="mono" font-weight="600">AÇIK KAYNAK PROJELER</text>
       <text x="14" y="48" fill="#0F172A" font-size="24" class="sans" font-weight="800">12</text>
-      <text x="186" y="48" fill="#D97706" font-size="11" class="mono" font-weight="700" text-anchor="end">REPOSITORIES</text>
+      <text x="186" y="48" fill="#D97706" font-size="10.5" class="mono" font-weight="700" text-anchor="end">KOD DEPOSU</text>
     </g>
   </g>
 
   <!-- Pulse Chart Section Header -->
   <text x="36" y="138" fill="#94A3B8" font-size="9.5" class="mono" font-weight="600">
-    TIMELINE PULSE DENSITY <tspan fill="#0284C7">(PAST 52 WEEKS)</tspan>
+    ZAMAN ÇİZELGESİ AKTİVİTE YOĞUNLUĞU <tspan fill="#0284C7">(SON 52 HAFTA)</tspan>
   </text>
   <text x="884" y="138" fill="#94A3B8" font-size="9.5" class="mono" text-anchor="end">
-    PEAK: 232 COMMITS/WK
+    ZİRVE: 232 COMMIT/HAFTA
   </text>
 
   <!-- Baseline Grid Line -->
@@ -96,19 +96,17 @@
 
   <!-- Bottom Timeline Labels -->
   <g transform="translate(36, 246)">
-    <text x="0" y="0" fill="#94A3B8" font-size="9" class="mono">52 WEEKS AGO</text>
-    <text x="212" y="0" fill="#94A3B8" font-size="9" class="mono" text-anchor="middle">Q1</text>
-    <text x="424" y="0" fill="#94A3B8" font-size="9" class="mono" text-anchor="middle">MID-YEAR</text>
-    <text x="636" y="0" fill="#94A3B8" font-size="9" class="mono" text-anchor="middle">Q3</text>
-    <text x="848" y="0" fill="#0D9488" font-size="9" class="mono" font-weight="700" text-anchor="end">PRESENT [ACTIVE]</text>
+    <text x="0" y="0" fill="#94A3B8" font-size="9" class="mono">52 HAFTA ÖNCE</text>
+    <text x="212" y="0" fill="#94A3B8" font-size="9" class="mono" text-anchor="middle">1. ÇEYREK</text>
+    <text x="424" y="0" fill="#94A3B8" font-size="9" class="mono" text-anchor="middle">YIL ORTASI</text>
+    <text x="636" y="0" fill="#94A3B8" font-size="9" class="mono" text-anchor="middle">3. ÇEYREK</text>
+    <text x="848" y="0" fill="#0D9488" font-size="9" class="mono" font-weight="700" text-anchor="end">ŞİMDİ [AKTİF]</text>
   </g>
 
   <!-- Telemetry Footnote -->
   <g transform="translate(36, 266)">
     <text x="0" y="0" fill="#475569" font-size="9" class="mono">
-      DATA SOURCE: <tspan fill="#0284C7">GITHUB GRAPHQL API</tspan> &nbsp;•&nbsp;
-      ZERO-DUMMY GUARANTEE: <tspan fill="#0D9488">AUTHENTIC TELEMETRY</tspan> &nbsp;•&nbsp;
-      ENGINEERING WORKSTATION
+      VERİ KAYNAĞI: <tspan fill="#0284C7">GITHUB GRAPHQL API</tspan> &nbsp;•&nbsp; <tspan fill="#0D9488">OTANTİK TELEMETRİ</tspan> &nbsp;•&nbsp; MÜHENDİSLİK İŞ İSTASYONU
     </text>
   </g>
 </svg>

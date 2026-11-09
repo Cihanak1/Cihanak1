@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Engineering Activity Monitor Generator
+Engineering Activity Monitor Generator (Bilingual: Turkish & English)
 Generates responsive dark and light SVG activity monitors using real GitHub data.
 Part of CIHANAK1 Developer Arcade & Engineering Workstation.
 """
@@ -97,7 +97,7 @@ def process_stats(user_data):
             "total_contributions": 382,
             "total_commits": 367,
             "total_repos": 11,
-            "active_weeks": 32,
+            "active_weeks": 14,
             "max_week_count": 28,
             "weekly_totals": [0] * 52,
             "sync_time": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
@@ -138,8 +138,9 @@ def process_stats(user_data):
         "sync_time": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     }
 
-def render_svg(stats, theme="dark"):
+def render_svg(stats, theme="dark", lang="en"):
     is_dark = (theme == "dark")
+    is_tr = (lang == "tr")
     
     # Theme Tokens
     bg_start = "#080D1A" if is_dark else "#FFFFFF"
@@ -166,10 +167,7 @@ def render_svg(stats, theme="dark"):
     max_w = stats["max_week_count"]
     sync_time = stats["sync_time"]
 
-    # Graph dimensions
-    # Total canvas: 920 x 280
-    # Pulse chart area: x=36, y=148, width=848, height=80
-    # 52 bars: bar_width = 12, gap = 4.3 -> ~848px
+    # Graph dimensions: 920 x 280
     chart_x = 36
     chart_y = 150
     chart_h = 75
@@ -191,7 +189,6 @@ def render_svg(stats, theme="dark"):
             ratio = min(count / max_w, 1.0)
             bh = max(int(ratio * chart_h), 8)
             by = chart_y + chart_h - bh
-            # Color gradient according to intensity
             if ratio < 0.25:
                 fill_col = cyan
                 op = "0.7"
@@ -208,19 +205,76 @@ def render_svg(stats, theme="dark"):
         if count > 0:
             points.append(f"{bx + bar_w/2.0:.1f},{by:.1f}")
 
-    # Polyline connecting active pulses
     pulse_polyline = ""
     if len(points) > 1:
         pts_str = " ".join(points)
         pulse_polyline = f'<polyline points="{pts_str}" fill="none" stroke="{cyan}" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />'
 
+    # Language Specific Strings
+    if is_tr:
+        title_main = "YAZILIM GELİŞTİRME AKTİVİTEM"
+        title_sub = "// 52 HAFTALIK COMMİT VE GELİŞTİRME RİTMİ"
+        title_sub_x = "220"
+        sync_label = f"GÜNCELLEME: {sync_time}"
+        
+        m1_title = "TOPLAM KATKI"
+        m1_sub = "YILLIK TOPLAM"
+        
+        m2_title = "COMMİT SAYISI"
+        m2_sub = "BİRİNCİL"
+        
+        m3_title = "AKTİF HAFTA"
+        m3_sub = "HAFTA"
+        
+        m4_title = "AÇIK KAYNAK PROJELER"
+        m4_sub = "KOD DEPOSU"
+        
+        pulse_header = f'ZAMAN ÇİZELGESİ AKTİVİTE YOĞUNLUĞU <tspan fill="{cyan}">(SON 52 HAFTA)</tspan>'
+        pulse_peak = f"ZİRVE: {max_w} COMMIT/HAFTA"
+        
+        t_start = "52 HAFTA ÖNCE"
+        t_q1 = "1. ÇEYREK"
+        t_mid = "YIL ORTASI"
+        t_q3 = "3. ÇEYREK"
+        t_now = "ŞİMDİ [AKTİF]"
+        
+        footnote = f'VERİ KAYNAĞI: <tspan fill="{cyan}">GITHUB GRAPHQL API</tspan> &nbsp;•&nbsp; <tspan fill="{mint}">OTANTİK TELEMETRİ</tspan> &nbsp;•&nbsp; MÜHENDİSLİK İŞ İSTASYONU'
+    else:
+        title_main = "ENGINEERING ACTIVITY MONITOR"
+        title_sub = "// 52-WEEK COMMIT CADENCE &amp; TELEMETRY"
+        title_sub_x = "256"
+        sync_label = f"SYNC: {sync_time}"
+        
+        m1_title = "CALENDAR CONTRIBUTIONS"
+        m1_sub = "YEAR-TOTAL"
+        
+        m2_title = "VERIFIED COMMITS"
+        m2_sub = "PRIMARY"
+        
+        m3_title = "ACTIVE CADENCE"
+        m3_sub = "WEEKS"
+        
+        m4_title = "PUBLIC CODEBASES"
+        m4_sub = "REPOSITORIES"
+        
+        pulse_header = f'TIMELINE PULSE DENSITY <tspan fill="{cyan}">(PAST 52 WEEKS)</tspan>'
+        pulse_peak = f"PEAK: {max_w} COMMITS/WK"
+        
+        t_start = "52 WEEKS AGO"
+        t_q1 = "Q1"
+        t_mid = "MID-YEAR"
+        t_q3 = "Q3"
+        t_now = "PRESENT [ACTIVE]"
+        
+        footnote = f'DATA SOURCE: <tspan fill="{cyan}">GITHUB GRAPHQL API</tspan> &nbsp;•&nbsp; ZERO-DUMMY GUARANTEE: <tspan fill="{mint}">AUTHENTIC TELEMETRY</tspan> &nbsp;•&nbsp; ENGINEERING WORKSTATION'
+
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" width="100%" height="100%">
   <defs>
-    <linearGradient id="actBg_{theme}" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="actBg_{theme}_{lang}" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="{bg_start}" />
       <stop offset="100%" stop-color="{bg_end}" />
     </linearGradient>
-    <linearGradient id="actBorder_{theme}" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="actBorder_{theme}_{lang}" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="{cyan}" stop-opacity="0.7" />
       <stop offset="50%" stop-color="{border_color}" />
       <stop offset="100%" stop-color="{mint}" stop-opacity="0.6" />
@@ -241,7 +295,7 @@ def render_svg(stats, theme="dark"):
   </style>
 
   <!-- Frame -->
-  <rect x="2" y="2" width="916" height="276" rx="12" fill="url(#actBg_{theme})" stroke="url(#actBorder_{theme})" stroke-width="1.5" />
+  <rect x="2" y="2" width="916" height="276" rx="12" fill="url(#actBg_{theme}_{lang})" stroke="url(#actBorder_{theme}_{lang})" stroke-width="1.5" />
 
   <!-- Top Title Bar -->
   <rect x="2" y="2" width="916" height="34" rx="12" fill="{header_bg}" />
@@ -250,53 +304,53 @@ def render_svg(stats, theme="dark"):
 
   <!-- Live Pulse Dot & Header Text -->
   <circle class="pulse-led" cx="24" cy="19" r="4" fill="{mint}" />
-  <text x="36" y="23" fill="{mint}" font-size="11" class="mono" font-weight="700">ENGINEERING ACTIVITY MONITOR</text>
-  <text x="256" y="23" fill="{text_muted}" font-size="10" class="mono">// 52-WEEK COMMIT CADENCE &amp; TELEMETRY</text>
+  <text x="36" y="23" fill="{mint}" font-size="11" class="mono" font-weight="700">{title_main}</text>
+  <text x="{title_sub_x}" y="23" fill="{text_muted}" font-size="10" class="mono">{title_sub}</text>
 
   <!-- Sync Timestamp -->
-  <text x="896" y="23" fill="{text_secondary}" font-size="10" class="mono" text-anchor="end">SYNC: {sync_time}</text>
+  <text x="896" y="23" fill="{text_secondary}" font-size="10" class="mono" text-anchor="end">{sync_label}</text>
 
   <!-- Metric Badges Row (4 Counters) -->
   <g transform="translate(36, 48)">
     <!-- Metric 1: Total Contributions -->
     <g transform="translate(0, 0)">
       <rect x="0" y="0" width="198" height="66" rx="6" fill="{card_bg}" stroke="{card_border}" stroke-width="1" />
-      <text x="14" y="20" fill="{text_muted}" font-size="9.5" class="mono" font-weight="600">CALENDAR CONTRIBUTIONS</text>
+      <text x="14" y="20" fill="{text_muted}" font-size="9.5" class="mono" font-weight="600">{m1_title}</text>
       <text x="14" y="48" fill="{text_primary}" font-size="24" class="sans" font-weight="800">{total}</text>
-      <text x="184" y="48" fill="{cyan}" font-size="11" class="mono" font-weight="700" text-anchor="end">YEAR-TOTAL</text>
+      <text x="184" y="48" fill="{cyan}" font-size="10.5" class="mono" font-weight="700" text-anchor="end">{m1_sub}</text>
     </g>
 
     <!-- Metric 2: Commits -->
     <g transform="translate(216, 0)">
       <rect x="0" y="0" width="198" height="66" rx="6" fill="{card_bg}" stroke="{card_border}" stroke-width="1" />
-      <text x="14" y="20" fill="{text_muted}" font-size="9.5" class="mono" font-weight="600">VERIFIED COMMITS</text>
+      <text x="14" y="20" fill="{text_muted}" font-size="9.5" class="mono" font-weight="600">{m2_title}</text>
       <text x="14" y="48" fill="{text_primary}" font-size="24" class="sans" font-weight="800">{commits}</text>
-      <text x="184" y="48" fill="{mint}" font-size="11" class="mono" font-weight="700" text-anchor="end">PRIMARY</text>
+      <text x="184" y="48" fill="{mint}" font-size="10.5" class="mono" font-weight="700" text-anchor="end">{m2_sub}</text>
     </g>
 
     <!-- Metric 3: Active Weeks -->
     <g transform="translate(432, 0)">
       <rect x="0" y="0" width="198" height="66" rx="6" fill="{card_bg}" stroke="{card_border}" stroke-width="1" />
-      <text x="14" y="20" fill="{text_muted}" font-size="9.5" class="mono" font-weight="600">ACTIVE CADENCE</text>
+      <text x="14" y="20" fill="{text_muted}" font-size="9.5" class="mono" font-weight="600">{m3_title}</text>
       <text x="14" y="48" fill="{text_primary}" font-size="24" class="sans" font-weight="800">{active}<tspan font-size="14" fill="{text_muted}">/52</tspan></text>
-      <text x="184" y="48" fill="{violet}" font-size="11" class="mono" font-weight="700" text-anchor="end">WEEKS</text>
+      <text x="184" y="48" fill="{violet}" font-size="10.5" class="mono" font-weight="700" text-anchor="end">{m3_sub}</text>
     </g>
 
     <!-- Metric 4: Public Repos -->
     <g transform="translate(648, 0)">
       <rect x="0" y="0" width="200" height="66" rx="6" fill="{card_bg}" stroke="{card_border}" stroke-width="1" />
-      <text x="14" y="20" fill="{text_muted}" font-size="9.5" class="mono" font-weight="600">PUBLIC CODEBASES</text>
+      <text x="14" y="20" fill="{text_muted}" font-size="9.5" class="mono" font-weight="600">{m4_title}</text>
       <text x="14" y="48" fill="{text_primary}" font-size="24" class="sans" font-weight="800">{repos}</text>
-      <text x="186" y="48" fill="{yellow}" font-size="11" class="mono" font-weight="700" text-anchor="end">REPOSITORIES</text>
+      <text x="186" y="48" fill="{yellow}" font-size="10.5" class="mono" font-weight="700" text-anchor="end">{m4_sub}</text>
     </g>
   </g>
 
   <!-- Pulse Chart Section Header -->
   <text x="36" y="138" fill="{text_muted}" font-size="9.5" class="mono" font-weight="600">
-    TIMELINE PULSE DENSITY <tspan fill="{cyan}">(PAST 52 WEEKS)</tspan>
+    {pulse_header}
   </text>
   <text x="884" y="138" fill="{text_muted}" font-size="9.5" class="mono" text-anchor="end">
-    PEAK: {max_w} COMMITS/WK
+    {pulse_peak}
   </text>
 
   <!-- Baseline Grid Line -->
@@ -312,19 +366,17 @@ def render_svg(stats, theme="dark"):
 
   <!-- Bottom Timeline Labels -->
   <g transform="translate(36, 246)">
-    <text x="0" y="0" fill="{text_muted}" font-size="9" class="mono">52 WEEKS AGO</text>
-    <text x="212" y="0" fill="{text_muted}" font-size="9" class="mono" text-anchor="middle">Q1</text>
-    <text x="424" y="0" fill="{text_muted}" font-size="9" class="mono" text-anchor="middle">MID-YEAR</text>
-    <text x="636" y="0" fill="{text_muted}" font-size="9" class="mono" text-anchor="middle">Q3</text>
-    <text x="848" y="0" fill="{mint}" font-size="9" class="mono" font-weight="700" text-anchor="end">PRESENT [ACTIVE]</text>
+    <text x="0" y="0" fill="{text_muted}" font-size="9" class="mono">{t_start}</text>
+    <text x="212" y="0" fill="{text_muted}" font-size="9" class="mono" text-anchor="middle">{t_q1}</text>
+    <text x="424" y="0" fill="{text_muted}" font-size="9" class="mono" text-anchor="middle">{t_mid}</text>
+    <text x="636" y="0" fill="{text_muted}" font-size="9" class="mono" text-anchor="middle">{t_q3}</text>
+    <text x="848" y="0" fill="{mint}" font-size="9" class="mono" font-weight="700" text-anchor="end">{t_now}</text>
   </g>
 
   <!-- Telemetry Footnote -->
   <g transform="translate(36, 266)">
     <text x="0" y="0" fill="{text_secondary}" font-size="9" class="mono">
-      DATA SOURCE: <tspan fill="{cyan}">GITHUB GRAPHQL API</tspan> &nbsp;•&nbsp;
-      ZERO-DUMMY GUARANTEE: <tspan fill="{mint}">AUTHENTIC TELEMETRY</tspan> &nbsp;•&nbsp;
-      ENGINEERING WORKSTATION
+      {footnote}
     </text>
   </g>
 </svg>
@@ -344,24 +396,32 @@ def main():
     output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "assets"))
     os.makedirs(output_dir, exist_ok=True)
     
-    dark_svg = render_svg(stats, theme="dark")
-    light_svg = render_svg(stats, theme="light")
-    
-    dark_path = os.path.join(output_dir, "activity-monitor-dark.svg")
-    light_path = os.path.join(output_dir, "activity-monitor-light.svg")
-    fallback_path = os.path.join(output_dir, "activity-monitor.svg")
-    
-    with open(dark_path, "w", encoding="utf-8") as f:
-        f.write(dark_svg)
-    print(f"Wrote {dark_path}")
-        
-    with open(light_path, "w", encoding="utf-8") as f:
-        f.write(light_svg)
-    print(f"Wrote {light_path}")
+    # 1. Turkish variants
+    tr_dark = render_svg(stats, theme="dark", lang="tr")
+    tr_light = render_svg(stats, theme="light", lang="tr")
+    with open(os.path.join(output_dir, "activity-monitor-tr-dark.svg"), "w", encoding="utf-8") as f:
+        f.write(tr_dark)
+    with open(os.path.join(output_dir, "activity-monitor-tr-light.svg"), "w", encoding="utf-8") as f:
+        f.write(tr_light)
+    print("Wrote activity-monitor-tr-(dark|light).svg")
 
-    with open(fallback_path, "w", encoding="utf-8") as f:
-        f.write(dark_svg)
-    print(f"Wrote {fallback_path}")
+    # 2. English variants
+    en_dark = render_svg(stats, theme="dark", lang="en")
+    en_light = render_svg(stats, theme="light", lang="en")
+    with open(os.path.join(output_dir, "activity-monitor-en-dark.svg"), "w", encoding="utf-8") as f:
+        f.write(en_dark)
+    with open(os.path.join(output_dir, "activity-monitor-en-light.svg"), "w", encoding="utf-8") as f:
+        f.write(en_light)
+    print("Wrote activity-monitor-en-(dark|light).svg")
+
+    # 3. Fallbacks
+    with open(os.path.join(output_dir, "activity-monitor-dark.svg"), "w", encoding="utf-8") as f:
+        f.write(tr_dark)
+    with open(os.path.join(output_dir, "activity-monitor-light.svg"), "w", encoding="utf-8") as f:
+        f.write(tr_light)
+    with open(os.path.join(output_dir, "activity-monitor.svg"), "w", encoding="utf-8") as f:
+        f.write(tr_dark)
+    print("Wrote activity-monitor default fallbacks.")
 
 if __name__ == "__main__":
     main()
