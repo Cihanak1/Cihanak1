@@ -238,7 +238,7 @@ def render_svg(stats, theme="dark", lang="en"):
         t_q3 = "3. ÇEYREK"
         t_now = "ŞİMDİ [AKTİF]"
         
-        footnote = f'VERİ KAYNAĞI: <tspan fill="{cyan}">GITHUB GRAPHQL API</tspan> &nbsp;•&nbsp; <tspan fill="{mint}">OTANTİK TELEMETRİ</tspan> &nbsp;•&nbsp; MÜHENDİSLİK İŞ İSTASYONU'
+        footnote = f'VERİ KAYNAĞI: <tspan fill="{cyan}">GITHUB GRAPHQL API</tspan> &#160;•&#160; <tspan fill="{mint}">OTANTİK TELEMETRİ</tspan> &#160;•&#160; MÜHENDİSLİK İŞ İSTASYONU'
     else:
         title_main = "ENGINEERING ACTIVITY MONITOR"
         title_sub = "// 52-WEEK COMMIT CADENCE &amp; TELEMETRY"
@@ -266,7 +266,7 @@ def render_svg(stats, theme="dark", lang="en"):
         t_q3 = "Q3"
         t_now = "PRESENT [ACTIVE]"
         
-        footnote = f'DATA SOURCE: <tspan fill="{cyan}">GITHUB GRAPHQL API</tspan> &nbsp;•&nbsp; ZERO-DUMMY GUARANTEE: <tspan fill="{mint}">AUTHENTIC TELEMETRY</tspan> &nbsp;•&nbsp; ENGINEERING WORKSTATION'
+        footnote = f'DATA SOURCE: <tspan fill="{cyan}">GITHUB GRAPHQL API</tspan> &#160;•&#160; ZERO-DUMMY GUARANTEE: <tspan fill="{mint}">AUTHENTIC TELEMETRY</tspan> &#160;•&#160; ENGINEERING WORKSTATION'
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" width="100%" height="100%">
   <defs>

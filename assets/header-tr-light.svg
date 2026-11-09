@@ -211,9 +211,9 @@
   <!-- Bottom Accent Status Bar -->
   <g transform="translate(26, 316)">
     <text x="0" y="0" fill="#64748B" font-size="10" class="mono">
-      PORT: <tspan fill="#0284C7">443/TLS</tspan> &nbsp;•&nbsp;
-      PROTOKOL: <tspan fill="#0D9488">GIT-YEREL</tspan> &nbsp;•&nbsp;
-      KONUM: <tspan fill="#475569">ELAZIĞ, TR</tspan> &nbsp;•&nbsp;
+      PORT: <tspan fill="#0284C7">443/TLS</tspan> &#160;•&#160;
+      PROTOKOL: <tspan fill="#0D9488">GIT-YEREL</tspan> &#160;•&#160;
+      KONUM: <tspan fill="#475569">ELAZIĞ, TR</tspan> &#160;•&#160;
       İŞ İSTASYONU: <tspan fill="#D97706">CIHANAK1_ARCADE</tspan>
     </text>
     <text x="868" y="0" fill="#64748B" font-size="10" class="mono" text-anchor="end">

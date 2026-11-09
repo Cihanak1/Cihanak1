@@ -211,9 +211,9 @@
   <!-- Bottom Accent Status Bar -->
   <g transform="translate(26, 316)">
     <text x="0" y="0" fill="#64748B" font-size="10" class="mono">
-      PORT: <tspan fill="#0284C7">443/TLS</tspan> &nbsp;•&nbsp;
-      PROTOCOL: <tspan fill="#0D9488">GIT-NATIVE</tspan> &nbsp;•&nbsp;
-      LOCATION: <tspan fill="#475569">ELAZIG, TR</tspan> &nbsp;•&nbsp;
+      PORT: <tspan fill="#0284C7">443/TLS</tspan> &#160;•&#160;
+      PROTOCOL: <tspan fill="#0D9488">GIT-NATIVE</tspan> &#160;•&#160;
+      LOCATION: <tspan fill="#475569">ELAZIG, TR</tspan> &#160;•&#160;
       WORKSTATION: <tspan fill="#D97706">CIHANAK1_ARCADE</tspan>
     </text>
     <text x="868" y="0" fill="#64748B" font-size="10" class="mono" text-anchor="end">

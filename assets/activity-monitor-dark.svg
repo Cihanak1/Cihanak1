@@ -38,7 +38,7 @@
   <text x="220" y="23" fill="#64748B" font-size="10" class="mono">// 52 HAFTALIK COMMİT VE GELİŞTİRME RİTMİ</text>
 
   <!-- Sync Timestamp -->
-  <text x="896" y="23" fill="#94A3B8" font-size="10" class="mono" text-anchor="end">GÜNCELLEME: 2026-11-09 16:00 UTC</text>
+  <text x="896" y="23" fill="#94A3B8" font-size="10" class="mono" text-anchor="end">GÜNCELLEME: 2026-11-09 16:46 UTC</text>
 
   <!-- Metric Badges Row (4 Counters) -->
   <g transform="translate(36, 48)">
@@ -46,7 +46,7 @@
     <g transform="translate(0, 0)">
       <rect x="0" y="0" width="198" height="66" rx="6" fill="#111827" stroke="#1E293B" stroke-width="1" />
       <text x="14" y="20" fill="#64748B" font-size="9.5" class="mono" font-weight="600">TOPLAM KATKI</text>
-      <text x="14" y="48" fill="#F8FAFC" font-size="24" class="sans" font-weight="800">384</text>
+      <text x="14" y="48" fill="#F8FAFC" font-size="24" class="sans" font-weight="800">385</text>
       <text x="184" y="48" fill="#38BDF8" font-size="10.5" class="mono" font-weight="700" text-anchor="end">YILLIK TOPLAM</text>
     </g>
 
@@ -54,7 +54,7 @@
     <g transform="translate(216, 0)">
       <rect x="0" y="0" width="198" height="66" rx="6" fill="#111827" stroke="#1E293B" stroke-width="1" />
       <text x="14" y="20" fill="#64748B" font-size="9.5" class="mono" font-weight="600">COMMİT SAYISI</text>
-      <text x="14" y="48" fill="#F8FAFC" font-size="24" class="sans" font-weight="800">368</text>
+      <text x="14" y="48" fill="#F8FAFC" font-size="24" class="sans" font-weight="800">369</text>
       <text x="184" y="48" fill="#5EEAD4" font-size="10.5" class="mono" font-weight="700" text-anchor="end">BİRİNCİL</text>
     </g>
 
@@ -106,7 +106,7 @@
   <!-- Telemetry Footnote -->
   <g transform="translate(36, 266)">
     <text x="0" y="0" fill="#94A3B8" font-size="9" class="mono">
-      VERİ KAYNAĞI: <tspan fill="#38BDF8">GITHUB GRAPHQL API</tspan> &nbsp;•&nbsp; <tspan fill="#5EEAD4">OTANTİK TELEMETRİ</tspan> &nbsp;•&nbsp; MÜHENDİSLİK İŞ İSTASYONU
+      VERİ KAYNAĞI: <tspan fill="#38BDF8">GITHUB GRAPHQL API</tspan> &#160;•&#160; <tspan fill="#5EEAD4">OTANTİK TELEMETRİ</tspan> &#160;•&#160; MÜHENDİSLİK İŞ İSTASYONU
     </text>
   </g>
 </svg>
