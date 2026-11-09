@@ -10,9 +10,9 @@
 </p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-en-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-en-light.svg">
-  <img alt="Cihan Akalın — Software Engineering Student &amp; Developer Tools Architect" src="assets/header-en-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-en-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-en-light.svg">
+  <img alt="Cihan Akalın — Software Engineering Student &amp; Developer Tools Architect" src="assets/hero-en-dark.svg" width="100%">
 </picture>
 
 <br>

@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+
+    <!-- Border Gradient -->
+    <linearGradient id="borderGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#7C3AED" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Tech Grid Pattern -->
+    <pattern id="arcadeGridLight" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#E2E8F0" stroke-width="0.75" stroke-opacity="0.8" />
+      <circle cx="24" cy="24" r="0.75" fill="#0284C7" fill-opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    
+    @keyframes cursorBlink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    
+    @keyframes pulseLiveLight {
+      0%, 100% { fill: #0D9488; opacity: 1; r: 3.5; }
+      50% { fill: #0284C7; opacity: 0.4; r: 4.5; }
+    }
+
+    @keyframes circuitRunLight {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    .cursor { animation: cursorBlink 1s infinite; }
+    .live-dot { animation: pulseLiveLight 2.4s infinite ease-in-out; }
+    .circuit-line {
+      stroke-dasharray: 40, 200;
+      animation: circuitRunLight 6s linear infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cursor, .live-dot, .circuit-line {
+        animation: none !important;
+      }
+    }
+  </style>
+
+  <!-- Outer Card Frame -->
+  <rect x="2" y="2" width="916" height="336" rx="14" fill="url(#bgGradLight)" stroke="url(#borderGradLight)" stroke-width="1.5" />
+  
+  <!-- Subtle Grid Overlay -->
+  <rect x="4" y="4" width="912" height="332" rx="12" fill="url(#arcadeGridLight)" />
+
+  <!-- Animated Circuit Line Accent at Top Border -->
+  <path class="circuit-line" d="M 14 2 L 400 2 L 430 14 L 600 14 L 630 2 L 906 2" fill="none" stroke="#0284C7" stroke-width="2" opacity="0.6" />
+
+  <!-- Top Terminal Bar -->
+  <g id="terminal-bar">
+    <rect x="2" y="2" width="916" height="38" rx="14" fill="#F1F5F9" />
+    <line x1="2" y1="40" x2="918" y2="40" stroke="#E2E8F0" stroke-width="1" />
+
+    <!-- macOS / Terminal Window Dots -->
+    <circle cx="24" cy="21" r="5" fill="#EF4444" />
+    <circle cx="40" cy="21" r="5" fill="#F59E0B" />
+    <circle cx="56" cy="21" r="5" fill="#10B981" />
+
+    <!-- Terminal Prompt & Path -->
+    <text x="80" y="25" fill="#475569" font-size="12" class="mono" font-weight="600">
+      cihan@workstation:<tspan fill="#0284C7">~/profile</tspan><tspan fill="#0D9488"> (arcade-v2.6)</tspan>
+    </text>
+
+    <!-- Top Right Status Badge -->
+    <g transform="translate(670, 12)">
+      <rect x="0" y="0" width="230" height="20" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+      <circle class="live-dot" cx="14" cy="10" r="3.5" fill="#0D9488" />
+      <text x="26" y="14" fill="#475569" font-size="10.5" class="mono" font-weight="600">FIRAT UNIV // SE YR-2</text>
+      <text x="180" y="14" fill="#0284C7" font-size="10.5" class="mono" font-weight="700">● LIVE</text>
+    </g>
+  </g>
+
+  <!-- Left Side: Engineering & Arcade Decorative Diagram -->
+  <g id="workstation-schematic" transform="translate(36, 68)">
+    <!-- Retro Arcade Mini Header Indicator -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="140" height="20" rx="4" fill="#E2E8F0" stroke="#0284C7" stroke-width="0.8" />
+      <text x="10" y="14" fill="#0284C7" font-size="10" class="mono" font-weight="700">ARCADE ENGINE 01</text>
+    </g>
+
+    <!-- Pac-Man Minimal Arcade Node -->
+    <g transform="translate(170, 10)">
+      <circle cx="0" cy="0" r="10" fill="#D97706" />
+      <!-- Mouth cut -->
+      <path d="M 0 0 L 10 -6 A 10 10 0 0 0 10 6 Z" fill="#F8FAFC" />
+      <!-- Food pellets -->
+      <circle cx="22" cy="0" r="2.5" fill="#0D9488" opacity="0.8" />
+      <circle cx="36" cy="0" r="2.5" fill="#0284C7" opacity="0.8" />
+      <circle cx="50" cy="0" r="2.5" fill="#7C3AED" opacity="0.8" />
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="66" fill="#0F172A" font-size="44" class="sans" font-weight="900" letter-spacing="1.5">
+      CIHAN AKALIN
+    </text>
+
+    <!-- Subtitle Stack -->
+    <g transform="translate(2, 94)">
+      <text x="0" y="0" fill="#0284C7" font-size="14.5" class="mono" font-weight="700" letter-spacing="0.5">
+        SOFTWARE ENGINEERING STUDENT <tspan fill="#94A3B8">|</tspan> <tspan fill="#0D9488">FIRAT UNIVERSITY</tspan>
+      </text>
+      <text x="0" y="24" fill="#334155" font-size="13.5" class="sans" font-weight="500">
+        AI-Native Developer Tools &amp; Compilers <tspan fill="#7C3AED">•</tspan> Desktop &amp; Software Architecture
+      </text>
+    </g>
+
+    <!-- Slogan with Terminal Prompt & Blinking Cursor -->
+    <g transform="translate(2, 154)">
+      <rect x="-6" y="-18" width="480" height="30" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+      <text x="8" y="2" fill="#D97706" font-size="13" class="mono" font-weight="700">&gt;</text>
+      <text x="24" y="2" fill="#0F172A" font-size="13" class="mono" font-weight="500">
+        "Building tools that make developers more effective."
+      </text>
+      <rect class="cursor" x="432" y="-10" width="8" height="15" fill="#0284C7" />
+    </g>
+
+    <!-- Technical Tags / Stack Badges -->
+    <g transform="translate(0, 204)">
+      <!-- Badge 1: AST / Static Analysis -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="154" height="26" rx="6" fill="#F1F5F9" stroke="#0284C7" stroke-width="1" />
+        <circle cx="14" cy="13" r="3" fill="#0284C7" />
+        <text x="24" y="17" fill="#1E293B" font-size="11" class="mono" font-weight="600">Tree-sitter &amp; AST</text>
+      </g>
+
+      <!-- Badge 2: AI & MCP -->
+      <g transform="translate(164, 0)">
+        <rect x="0" y="0" width="138" height="26" rx="6" fill="#F1F5F9" stroke="#7C3AED" stroke-width="1" />
+        <circle cx="14" cy="13" r="3" fill="#7C3AED" />
+        <text x="24" y="17" fill="#1E293B" font-size="11" class="mono" font-weight="600">MCP Protocol</text>
+      </g>
+
+      <!-- Badge 3: Desktop Engineering -->
+      <g transform="translate(312, 0)">
+        <rect x="0" y="0" width="170" height="26" rx="6" fill="#F1F5F9" stroke="#0D9488" stroke-width="1" />
+        <circle cx="14" cy="13" r="3" fill="#0D9488" />
+        <text x="24" y="17" fill="#1E293B" font-size="11" class="mono" font-weight="600">WinUI 3 &amp; .NET 10</text>
+      </g>
+
+      <!-- Badge 4: Architecture -->
+      <g transform="translate(492, 0)">
+        <rect x="0" y="0" width="144" height="26" rx="6" fill="#F1F5F9" stroke="#D97706" stroke-width="1" />
+        <circle cx="14" cy="13" r="3" fill="#D97706" />
+        <text x="24" y="17" fill="#1E293B" font-size="11" class="mono" font-weight="600">Systems &amp; IPC</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Side: Engineering Telemetry & Radar Grid Widget -->
+  <g id="telemetry-box" transform="translate(680, 68)">
+    <rect x="0" y="0" width="206" height="232" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
+    
+    <!-- Telemetry Header -->
+    <rect x="0" y="0" width="206" height="26" rx="10" fill="#F1F5F9" />
+    <path d="M 0 16 L 0 26 L 206 26 L 206 16" fill="#F1F5F9" />
+    <line x1="0" y1="26" x2="206" y2="26" stroke="#E2E8F0" stroke-width="1" />
+    <text x="12" y="17" fill="#475569" font-size="10" class="mono" font-weight="700">CORE METRICS // SYS_ST</text>
+
+    <!-- Radar / Circular Scope Accent -->
+    <g transform="translate(103, 85)">
+      <!-- Outer target circles -->
+      <circle cx="0" cy="0" r="42" fill="none" stroke="#E2E8F0" stroke-width="1" />
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,3" />
+      <circle cx="0" cy="0" r="14" fill="none" stroke="#0284C7" stroke-width="0.8" stroke-opacity="0.5" />
+      <!-- Crosshairs -->
+      <line x1="-46" y1="0" x2="46" y2="0" stroke="#E2E8F0" stroke-width="1" />
+      <line x1="0" y1="-46" x2="0" y2="46" stroke="#E2E8F0" stroke-width="1" />
+      <!-- Animated Sweep Hand -->
+      <line x1="0" y1="0" x2="30" y2="-30" stroke="#0D9488" stroke-width="1.8" />
+      <circle cx="0" cy="0" r="3" fill="#0284C7" />
+      <circle cx="22" cy="-14" r="2.5" fill="#D97706" />
+      <circle cx="-16" cy="20" r="2" fill="#0D9488" />
+      <circle cx="12" cy="24" r="2" fill="#7C3AED" />
+    </g>
+
+    <!-- Key Telemetry Readouts -->
+    <g transform="translate(14, 148)">
+      <line x1="0" y1="0" x2="178" y2="0" stroke="#E2E8F0" stroke-width="1" />
+      
+      <text x="0" y="18" fill="#64748B" font-size="10" class="mono">STATUS</text>
+      <text x="178" y="18" fill="#0D9488" font-size="10.5" class="mono" font-weight="700" text-anchor="end">READY / ACTIVE</text>
+
+      <text x="0" y="36" fill="#64748B" font-size="10" class="mono">DEV ARCH</text>
+      <text x="178" y="36" fill="#0284C7" font-size="10.5" class="mono" font-weight="700" text-anchor="end">AST + IPC</text>
+
+      <text x="0" y="54" fill="#64748B" font-size="10" class="mono">TARGET</text>
+      <text x="178" y="54" fill="#D97706" font-size="10.5" class="mono" font-weight="700" text-anchor="end">PROD-GRADE</text>
+
+      <text x="0" y="72" fill="#64748B" font-size="10" class="mono">REPOS</text>
+      <text x="178" y="72" fill="#7C3AED" font-size="10.5" class="mono" font-weight="700" text-anchor="end">PUBLIC &amp; OPEN</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Status Bar -->
+  <g transform="translate(26, 316)">
+    <text x="0" y="0" fill="#64748B" font-size="10" class="mono">
+      PORT: <tspan fill="#0284C7">443/TLS</tspan> &#160;•&#160;
+      PROTOCOL: <tspan fill="#0D9488">GIT-NATIVE</tspan> &#160;•&#160;
+      LOCATION: <tspan fill="#475569">ELAZIG, TR</tspan> &#160;•&#160;
+      WORKSTATION: <tspan fill="#D97706">CIHANAK1_ARCADE</tspan>
+    </text>
+    <text x="868" y="0" fill="#64748B" font-size="10" class="mono" text-anchor="end">
+      [SECURED_PIPELINE // VERIFIED]
+    </text>
+  </g>
+</svg>
