@@ -15,12 +15,12 @@
   <img alt="Cihan Akalın — Software Engineering Student &amp; Developer Tools Architect" src="assets/hero-en-dark.svg" width="100%">
 </picture>
 
-<br>
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cihan-akalin/)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Cihanak1)
-[![Fırat University](https://img.shields.io/badge/Fırat_University-Software_Engineering_YR--2-0052CC?style=for-the-badge&logo=academia&logoColor=white)](https://www.firat.edu.tr)
-[![Focus](https://img.shields.io/badge/Focus-AI--Native_Tools_%26_Desktop_Architecture-0D9488?style=for-the-badge)](https://github.com/Cihanak1/RepoDNA)
+<p align="center">
+  <a href="https://github.com/Cihanak1"><b>GitHub</b></a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/cihan-akalin/"><b>LinkedIn</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/Cihanak1/RepoDNA"><b>RepoDNA (v0.3.0)</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/Cihanak1/NiceWP"><b>NiceWP</b></a>
+</p>
 
 </div>
 

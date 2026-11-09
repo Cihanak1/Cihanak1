@@ -15,12 +15,12 @@
   <img alt="Cihan Akalın — Yazılım Mühendisliği Öğrencisi &amp; Geliştirici Araçları Mimarı" src="assets/hero-tr-dark.svg" width="100%">
 </picture>
 
-<br>
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cihan-akalin/)
-[![GitHub](https://img.shields.io/badge/GitHub-Profil-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Cihanak1)
-[![Fırat Üniversitesi](https://img.shields.io/badge/Fırat_Üniversitesi-Yazılım_Mühendisliği_2._Sınıf-0052CC?style=for-the-badge&logo=academia&logoColor=white)](https://www.firat.edu.tr)
-[![Odak](https://img.shields.io/badge/Odak-Yapay_Zekâ_Araçları_%26_Masaüstü_Mimarisi-0D9488?style=for-the-badge)](https://github.com/Cihanak1/RepoDNA)
+<p align="center">
+  <a href="https://github.com/Cihanak1"><b>GitHub</b></a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/cihan-akalin/"><b>LinkedIn</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/Cihanak1/RepoDNA"><b>RepoDNA (v0.3.0)</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/Cihanak1/NiceWP"><b>NiceWP</b></a>
+</p>
 
 </div>
 
