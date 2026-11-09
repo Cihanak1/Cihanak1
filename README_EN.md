@@ -116,8 +116,6 @@ Whether extracting directed acyclic graphs from multi-language repositories in *
 
 ### 👾 Contribution Arcade — Pac-Man
 
-Pac-Man eats through my real GitHub contribution graph while Blinky, Pinky, Inky, and Clyde give chase. Darker pellets represent days with higher commit density. Generated daily from real commit telemetry.
-
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Cihanak1/Cihanak1/output/pacman-contribution-graph-dark.svg">

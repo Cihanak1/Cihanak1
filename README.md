@@ -116,8 +116,6 @@
 
 ### 👾 Katkı Macerası — Pac-Man
 
-GitHub katkılarım, Pac-Man'in katkı karelerini topladığı animasyonlu bir oyun alanına dönüşüyor. Bu grafik her gün gerçek GitHub etkinliklerime göre güncelleniyor.
-
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Cihanak1/Cihanak1/output/pacman-contribution-graph-dark.svg">
