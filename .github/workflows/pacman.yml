@@ -1,0 +1,51 @@
+name: Pac-Man Contribution Arcade
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Midnight UTC daily
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/pacman.yml'
+
+concurrency:
+  group: pacman-arcade-graph
+  cancel-in-progress: true
+
+jobs:
+  generate-pacman:
+    name: Generate Pac-Man Graphs
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v4
+
+      - name: Generate Arcade Contribution Graphs
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          games: 'pacman'
+          hide_month_labels: 'false'
+
+      - name: Validate Generated Output
+        run: |
+          echo "Verifying generated arcade SVGs..."
+          test -d dist || { echo "dist directory missing"; exit 1; }
+          test -f dist/pacman-contribution-graph.svg || { echo "Light Pac-Man SVG missing"; exit 1; }
+          test -f dist/pacman-contribution-graph-dark.svg || { echo "Dark Pac-Man SVG missing"; exit 1; }
+          echo "Verified: dist/ contains pacman-contribution-graph.svg and pacman-contribution-graph-dark.svg"
+
+      - name: Push SVGs to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "chore(arcade): refresh Pac-Man contribution graph [skip ci]"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

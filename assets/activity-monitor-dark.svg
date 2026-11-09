@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="actBg_dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A" />
+      <stop offset="100%" stop-color="#0D1322" />
+    </linearGradient>
+    <linearGradient id="actBorder_dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#5EEAD4" stop-opacity="0.6" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    @keyframes pulseLedAct {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    .pulse-led { animation: pulseLedAct 2s infinite ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .pulse-led { animation: none !important; }
+    }
+  </style>
+
+  <!-- Frame -->
+  <rect x="2" y="2" width="916" height="276" rx="12" fill="url(#actBg_dark)" stroke="url(#actBorder_dark)" stroke-width="1.5" />
+
+  <!-- Top Title Bar -->
+  <rect x="2" y="2" width="916" height="34" rx="12" fill="#111827" />
+  <path d="M 2 20 L 2 36 L 918 36 L 918 20" fill="#111827" />
+  <line x1="2" y1="36" x2="918" y2="36" stroke="#1E293B" stroke-width="1" />
+
+  <!-- Live Pulse Dot & Header Text -->
+  <circle class="pulse-led" cx="24" cy="19" r="4" fill="#5EEAD4" />
+  <text x="36" y="23" fill="#5EEAD4" font-size="11" class="mono" font-weight="700">ENGINEERING ACTIVITY MONITOR</text>
+  <text x="256" y="23" fill="#64748B" font-size="10" class="mono">// 52-WEEK COMMIT CADENCE &amp; TELEMETRY</text>
+
+  <!-- Sync Timestamp -->
+  <text x="896" y="23" fill="#94A3B8" font-size="10" class="mono" text-anchor="end">SYNC: 2026-11-09 15:38 UTC</text>
+
+  <!-- Metric Badges Row (4 Counters) -->
+  <g transform="translate(36, 48)">
+    <!-- Metric 1: Total Contributions -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="198" height="66" rx="6" fill="#111827" stroke="#1E293B" stroke-width="1" />
+      <text x="14" y="20" fill="#64748B" font-size="9.5" class="mono" font-weight="600">CALENDAR CONTRIBUTIONS</text>
+      <text x="14" y="48" fill="#F8FAFC" font-size="24" class="sans" font-weight="800">382</text>
+      <text x="184" y="48" fill="#38BDF8" font-size="11" class="mono" font-weight="700" text-anchor="end">YEAR-TOTAL</text>
+    </g>
+
+    <!-- Metric 2: Commits -->
+    <g transform="translate(216, 0)">
+      <rect x="0" y="0" width="198" height="66" rx="6" fill="#111827" stroke="#1E293B" stroke-width="1" />
+      <text x="14" y="20" fill="#64748B" font-size="9.5" class="mono" font-weight="600">VERIFIED COMMITS</text>
+      <text x="14" y="48" fill="#F8FAFC" font-size="24" class="sans" font-weight="800">367</text>
+      <text x="184" y="48" fill="#5EEAD4" font-size="11" class="mono" font-weight="700" text-anchor="end">PRIMARY</text>
+    </g>
+
+    <!-- Metric 3: Active Weeks -->
+    <g transform="translate(432, 0)">
+      <rect x="0" y="0" width="198" height="66" rx="6" fill="#111827" stroke="#1E293B" stroke-width="1" />
+      <text x="14" y="20" fill="#64748B" font-size="9.5" class="mono" font-weight="600">ACTIVE CADENCE</text>
+      <text x="14" y="48" fill="#F8FAFC" font-size="24" class="sans" font-weight="800">14<tspan font-size="14" fill="#64748B">/52</tspan></text>
+      <text x="184" y="48" fill="#8B5CF6" font-size="11" class="mono" font-weight="700" text-anchor="end">WEEKS</text>
+    </g>
+
+    <!-- Metric 4: Public Repos -->
+    <g transform="translate(648, 0)">
+      <rect x="0" y="0" width="200" height="66" rx="6" fill="#111827" stroke="#1E293B" stroke-width="1" />
+      <text x="14" y="20" fill="#64748B" font-size="9.5" class="mono" font-weight="600">PUBLIC CODEBASES</text>
+      <text x="14" y="48" fill="#F8FAFC" font-size="24" class="sans" font-weight="800">11</text>
+      <text x="186" y="48" fill="#FACC15" font-size="11" class="mono" font-weight="700" text-anchor="end">REPOSITORIES</text>
+    </g>
+  </g>
+
+  <!-- Pulse Chart Section Header -->
+  <text x="36" y="138" fill="#64748B" font-size="9.5" class="mono" font-weight="600">
+    TIMELINE PULSE DENSITY <tspan fill="#38BDF8">(PAST 52 WEEKS)</tspan>
+  </text>
+  <text x="884" y="138" fill="#64748B" font-size="9.5" class="mono" text-anchor="end">
+    PEAK: 232 COMMITS/WK
+  </text>
+
+  <!-- Baseline Grid Line -->
+  <line x1="36" y1="225" x2="884" y2="225" stroke="#1E293B" stroke-width="1" />
+
+  <!-- Weekly Pulse Bars -->
+  <g id="bars">
+    <rect x="36.0" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="52.3" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="68.6" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="84.9" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="101.2" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="117.5" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="133.8" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="150.2" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="166.5" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="182.8" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="199.1" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="215.4" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="231.7" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="248.0" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="264.3" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="280.6" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="296.9" y="217.0" width="12.3" height="8.0" rx="2" fill="#38BDF8" opacity="0.7" /><rect x="313.2" y="217.0" width="12.3" height="8.0" rx="2" fill="#38BDF8" opacity="0.7" /><rect x="329.5" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="345.8" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="362.2" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="378.5" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="394.8" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="411.1" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="427.4" y="217.0" width="12.3" height="8.0" rx="2" fill="#38BDF8" opacity="0.7" /><rect x="443.7" y="217.0" width="12.3" height="8.0" rx="2" fill="#38BDF8" opacity="0.7" /><rect x="460.0" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="476.3" y="217.0" width="12.3" height="8.0" rx="2" fill="#38BDF8" opacity="0.7" /><rect x="492.6" y="217.0" width="12.3" height="8.0" rx="2" fill="#38BDF8" opacity="0.7" /><rect x="508.9" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="525.2" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="541.5" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="557.8" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="574.2" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="590.5" y="217.0" width="12.3" height="8.0" rx="2" fill="#38BDF8" opacity="0.7" /><rect x="606.8" y="217.0" width="12.3" height="8.0" rx="2" fill="#38BDF8" opacity="0.7" /><rect x="623.1" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="639.4" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="655.7" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="672.0" y="217.0" width="12.3" height="8.0" rx="2" fill="#38BDF8" opacity="0.7" /><rect x="688.3" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="704.6" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="720.9" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="737.2" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="753.5" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="769.8" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="786.2" y="217.0" width="12.3" height="8.0" rx="2" fill="#38BDF8" opacity="0.7" /><rect x="802.5" y="216.0" width="12.3" height="9.0" rx="2" fill="#38BDF8" opacity="0.7" /><rect x="818.8" y="150.0" width="12.3" height="75.0" rx="2" fill="#FACC15" opacity="1.0" /><rect x="835.1" y="221.0" width="12.3" height="4.0" rx="2" fill="#1E293B" opacity="0.4" /><rect x="851.4" y="217.0" width="12.3" height="8.0" rx="2" fill="#38BDF8" opacity="0.7" /><rect x="867.7" y="211.0" width="12.3" height="14.0" rx="2" fill="#38BDF8" opacity="0.7" />
+  </g>
+
+  <!-- Connecting Node Polyline -->
+  <polyline points="303.1,217.0 319.4,217.0 433.5,217.0 449.8,217.0 482.5,217.0 498.8,217.0 596.6,217.0 612.9,217.0 678.2,217.0 792.3,217.0 808.6,216.0 824.9,150.0 857.5,217.0 873.8,211.0" fill="none" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />
+
+  <!-- Bottom Timeline Labels -->
+  <g transform="translate(36, 246)">
+    <text x="0" y="0" fill="#64748B" font-size="9" class="mono">52 WEEKS AGO</text>
+    <text x="212" y="0" fill="#64748B" font-size="9" class="mono" text-anchor="middle">Q1</text>
+    <text x="424" y="0" fill="#64748B" font-size="9" class="mono" text-anchor="middle">MID-YEAR</text>
+    <text x="636" y="0" fill="#64748B" font-size="9" class="mono" text-anchor="middle">Q3</text>
+    <text x="848" y="0" fill="#5EEAD4" font-size="9" class="mono" font-weight="700" text-anchor="end">PRESENT [ACTIVE]</text>
+  </g>
+
+  <!-- Telemetry Footnote -->
+  <g transform="translate(36, 266)">
+    <text x="0" y="0" fill="#94A3B8" font-size="9" class="mono">
+      DATA SOURCE: <tspan fill="#38BDF8">GITHUB GRAPHQL API</tspan> &nbsp;•&nbsp;
+      ZERO-DUMMY GUARANTEE: <tspan fill="#5EEAD4">AUTHENTIC TELEMETRY</tspan> &nbsp;•&nbsp;
+      ENGINEERING WORKSTATION
+    </text>
+  </g>
+</svg>
