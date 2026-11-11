@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img">
+<rect width="1200" height="360" fill="#101917"/>
+<rect x="1" y="1" width="1198" height="358" fill="none" stroke="#455A53"/>
+<rect x="0" y="0" width="8" height="360" fill="#A6CBB4"/>
+<text x="38" y="37" fill="#A6CBB4" font-family="Consolas, Menlo, Courier New, monospace" font-size="15" font-weight="700" letter-spacing="1">CIHAN(1)</text>
+<text x="504" y="37" fill="#829C90" font-family="Consolas, Menlo, Courier New, monospace" font-size="14" font-weight="400" letter-spacing="1">PERSONAL MANUAL</text>
+<text x="1086" y="37" fill="#A6CBB4" font-family="Consolas, Menlo, Courier New, monospace" font-size="15" font-weight="700" letter-spacing="1">CIHAN(1)</text>
+<line x1="38" y1="54" x2="1162" y2="54" stroke="#455A53" stroke-width="1"/>
+<text x="38" y="105" fill="#6E897C" font-family="Consolas, Menlo, Courier New, monospace" font-size="13" font-weight="400" letter-spacing="1">01</text>
+<text x="38" y="149" fill="#6E897C" font-family="Consolas, Menlo, Courier New, monospace" font-size="13" font-weight="400" letter-spacing="1">02</text>
+<text x="38" y="195" fill="#6E897C" font-family="Consolas, Menlo, Courier New, monospace" font-size="13" font-weight="400" letter-spacing="1">03</text>
+<text x="38" y="239" fill="#6E897C" font-family="Consolas, Menlo, Courier New, monospace" font-size="13" font-weight="400" letter-spacing="1">04</text>
+<text x="38" y="283" fill="#6E897C" font-family="Consolas, Menlo, Courier New, monospace" font-size="13" font-weight="400" letter-spacing="1">05</text>
+<line x1="78" y1="76" x2="78" y2="291" stroke="#455A53" stroke-width="1"/>
+<text x="103" y="108" fill="#D9AC74" font-family="Consolas, Menlo, Courier New, monospace" font-size="13" font-weight="700" letter-spacing="2">NAME</text>
+<text x="103" y="173" fill="#F0F2EA" font-family="Consolas, Menlo, Courier New, monospace" font-size="62" font-weight="700" letter-spacing="-2">Cihan Akalın</text>
+<text x="106" y="215" fill="#A6CBB4" font-family="Consolas, Menlo, Courier New, monospace" font-size="17" font-weight="700" letter-spacing="1.2">SOFTWARE ENGINEERING</text>
+<text x="106" y="247" fill="#C8D4CA" font-family="Consolas, Menlo, Courier New, monospace" font-size="17" font-weight="400" letter-spacing="0">Fırat University</text>
+<line x1="628" y1="78" x2="628" y2="291" stroke="#455A53" stroke-width="1"/>
+<text x="664" y="108" fill="#D9AC74" font-family="Consolas, Menlo, Courier New, monospace" font-size="13" font-weight="700" letter-spacing="1.2">01 / AREAS OF INTEREST</text>
+<text x="664" y="153" fill="#6E897C" font-family="Consolas, Menlo, Courier New, monospace" font-size="13" font-weight="400" letter-spacing="0">01</text>
+<text x="705" y="153" fill="#DCE5DE" font-family="Consolas, Menlo, Courier New, monospace" font-size="20" font-weight="400" letter-spacing="0">developer tools</text>
+<text x="664" y="196" fill="#6E897C" font-family="Consolas, Menlo, Courier New, monospace" font-size="13" font-weight="400" letter-spacing="0">02</text>
+<text x="705" y="196" fill="#DCE5DE" font-family="Consolas, Menlo, Courier New, monospace" font-size="20" font-weight="400" letter-spacing="0">static code analysis</text>
+<text x="664" y="239" fill="#6E897C" font-family="Consolas, Menlo, Courier New, monospace" font-size="13" font-weight="400" letter-spacing="0">03</text>
+<text x="705" y="239" fill="#DCE5DE" font-family="Consolas, Menlo, Courier New, monospace" font-size="20" font-weight="400" letter-spacing="0">Windows desktop</text>
+<line x1="38" y1="302" x2="1162" y2="302" stroke="#455A53" stroke-width="1"/>
+<text x="38" y="332" fill="#829C90" font-family="Consolas, Menlo, Courier New, monospace" font-size="13" font-weight="400" letter-spacing="1">PERSONAL PROFILE  /  CIHANAK1</text>
+<text x="1090" y="332" fill="#A6CBB4" font-family="Consolas, Menlo, Courier New, monospace" font-size="13" font-weight="700" letter-spacing="1">END  ▌</text>
+</svg>
