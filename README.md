@@ -1,23 +1,49 @@
-# Cihan Akalın
+<p align="right">
+  <strong>Türkçe</strong> &nbsp;·&nbsp; <a href="README_EN.md">English</a>
+</p>
 
-Fırat Üniversitesi'nde yazılım mühendisliği öğrencisiyim. Kod tabanlarını anlamaya yarayan geliştirici araçları ve Windows masaüstü uygulamaları geliştiriyorum.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="visuals/masthead-tr-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="visuals/masthead-tr-light.svg">
+  <img src="visuals/masthead-tr-light.svg" width="100%" alt="Cihan Akalın. Solda isim ve Fırat Üniversitesi bilgisi, sağda kod bağımlılıkları ile Windows masaüstü katmanlarını anlatan çizimler.">
+</picture>
 
-[English](README_EN.md) · [LinkedIn](https://www.linkedin.com/in/cihan-akalin/)
+## Merhaba, ben Cihan.
 
-## Projeler
+Fırat Üniversitesi'nde yazılım mühendisliği okuyorum. Bir kod tabanının içindeki ilişkileri görünür kılan araçlar ve Windows masaüstü için uygulamalar geliştiriyorum. İki alanda da ilgimi çeken şey aynı: karmaşık bir sistemi anlaşılır, denetlenebilir ve kullanışlı hâle getirmek.
 
-### [RepoDNA](https://github.com/Cihanak1/RepoDNA)
+## Seçili işler
 
-Bir deponun yapısını görünür kılan statik analiz aracı. Tree-sitter ile kod sembollerini ve modüller arasındaki ilişkileri çıkarıyor; bağımlılık döngülerini, değişikliklerin etkisini ve mimari sınırları incelemeye yardımcı oluyor. Komut satırı, görsel arayüz ve MCP sunucusu var.
+### 01 / RepoDNA — kod tabanının haritası
 
-**Python · TypeScript · Tree-sitter · FastAPI**
+<a href="https://github.com/Cihanak1/RepoDNA">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="visuals/repodna-tr-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="visuals/repodna-tr-light.svg">
+    <img src="visuals/repodna-tr-light.svg" width="100%" alt="RepoDNA şeması: kaynak kod, semboller, bağımlılık grafiği ve kanıt zinciri.">
+  </picture>
+</a>
 
-### [NiceWP](https://github.com/Cihanak1/NiceWP)
+Bir depoda “bu değişiklik nereleri etkiler?” sorusunun peşinden gidiyor. Tree-sitter ile sembolleri ve modüller arasındaki ilişkileri çıkarıyor; bağımlılık döngülerini, mimari sınırları ve değişiklik etkisini incelemek için komut satırı, görsel arayüz ve MCP sunucusu sunuyor.
 
-Windows için statik ve video duvar kâğıdı uygulaması. WinUI 3 arayüzü ile masaüstü çizim motoru ayrı süreçlerde çalışıyor. Tam ekran uygulamalarda ve pil tasarrufunda video oynatımını duraklatacak şekilde tasarlandı.
+**Kullandığım araçlar:** Python, TypeScript, Tree-sitter, FastAPI.<br>
+**İncele:** [Kaynak kod ve dokümantasyon](https://github.com/Cihanak1/RepoDNA)
 
-**C# · .NET · WinUI 3 · Win32**
+### 02 / NiceWP — masaüstünün katmanları
 
-## İletişim
+<a href="https://github.com/Cihanak1/NiceWP">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="visuals/nicewp-tr-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="visuals/nicewp-tr-light.svg">
+    <img src="visuals/nicewp-tr-light.svg" width="100%" alt="NiceWP şeması: WinUI arayüzü, ayrı çizim süreci ve Windows masaüstü katmanları.">
+  </picture>
+</a>
 
-Projelerle ilgili fikir veya geri bildirim için [LinkedIn üzerinden ulaşabilirsiniz](https://www.linkedin.com/in/cihan-akalin/). Hata bildirimleri ve teknik öneriler için ilgili projenin GitHub Issues bölümünü kullanabilirsiniz.
+Windows için statik ve video duvar kâğıtlarıyla çalışan bir uygulama. WinUI 3 arayüzünü masaüstü çizim motorundan ayrı bir süreçte tutuyor. Tam ekran uygulamalar ve pil tasarrufu gibi durumlarda video oynatımını duraklatacak şekilde tasarlandı.
+
+**Kullandığım araçlar:** C#, .NET, WinUI 3, Win32.<br>
+**İncele:** [Kaynak kod ve sürüm bilgileri](https://github.com/Cihanak1/NiceWP)
+
+---
+
+Diğer çalışmalarım [depolar sayfamda](https://github.com/Cihanak1?tab=repositories). Bir projeye dair fikir veya geri bildirim paylaşmak istersen [LinkedIn'den ulaşabilirsin](https://www.linkedin.com/in/cihan-akalin/).
